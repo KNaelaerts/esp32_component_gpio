@@ -7,13 +7,13 @@
 
 void MyGPIO_setup_output(int pin)
 {
-    gpio_pad_select_gpio(pin);
+    gpio_reset_pin(pin);
     gpio_set_direction(pin, GPIO_MODE_INPUT_OUTPUT);
 
 }
 void MyGPIO_setup_button(int pin)
 {
-    gpio_pad_select_gpio(pin);
+    gpio_reset_pin(pin);
     gpio_set_direction(pin, GPIO_MODE_INPUT);
     gpio_pullup_en(pin);
 
